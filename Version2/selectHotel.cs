@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Version2
@@ -38,6 +39,41 @@ namespace Version2
             else
             {
                 lblLocation.Text = "9A, Gulberg III, Mian Mehmood Ali Kasoori Road";
+            }
+            lblApproval.Text = "Active";
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(comboBox1.Text == "")
+            {
+                MessageBox.Show("Firstly Select Hotel");
+            }
+            else
+            {
+                bool check = false;
+                var con = Configuration.getInstance().getConnection();
+                SqlCommand cmd = new SqlCommand("Insert into Hotels values(@HotelName,@Location,@ApprovalStatus)",con);
+                cmd.Parameters.AddWithValue("@HotelName", comboBox1.Text);
+                cmd.Parameters.AddWithValue("@Location", lblLocation.Text);
+                cmd.Parameters.AddWithValue("@ApprovalStatus", lblApproval.Text);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    check = true;
+                }
+                catch(Exception C)
+                {
+                    MessageBox.Show(C.Message);
+                }
+                if (check)
+                {
+                    MessageBox.Show("Data Added Successfully :)");
+                }
+
+
+
             }
         }
     }

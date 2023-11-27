@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-//Using Forms;
 
 namespace Version2
 {
@@ -70,11 +69,18 @@ namespace Version2
                         
                     }
 
-                    if (checker)
+                    if (checker && userType == "User")
                     {
                         this.Hide();
                         dashboard1 form = new dashboard1(userName);
                         form.Show();
+                    }
+                    else if(checker && userType == "Admin")
+                    {
+                        this.Hide();
+                        dashBoard2 form = new dashBoard2(userName);
+                        form.Show();
+
                     }
                     if (!checker)
                     {
@@ -83,8 +89,6 @@ namespace Version2
                         txtPassword.Text = "";
                         txtUsername.Text = "";
                         comboBox1.Text = "";
-                        
-
                     }
                    // MessageBox.Show(userName + " " + userPassword + "" + userType);
             }

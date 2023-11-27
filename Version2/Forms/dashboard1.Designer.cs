@@ -31,6 +31,7 @@ namespace Version2
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboard1));
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.btnSelectHotel = new System.Windows.Forms.Button();
             this.btnCustomerDetail = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,10 +42,10 @@ namespace Version2
             this.panelUpper = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelHolder = new System.Windows.Forms.Panel();
-            this.btnSelectHotel = new System.Windows.Forms.Button();
+            this.btnAddRoom = new System.Windows.Forms.Button();
+            this.selectHotel1 = new Version2.selectHotel();
             this.mainPicture1 = new Version2.mainPicture();
             this.customerDetail1 = new Version2.customerDetail();
-            this.selectHotel1 = new Version2.selectHotel();
             this.sidePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,6 +58,7 @@ namespace Version2
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.sidePanel.Controls.Add(this.btnAddRoom);
             this.sidePanel.Controls.Add(this.btnSelectHotel);
             this.sidePanel.Controls.Add(this.btnCustomerDetail);
             this.sidePanel.Controls.Add(this.panel2);
@@ -65,6 +67,25 @@ namespace Version2
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(293, 748);
             this.sidePanel.TabIndex = 0;
+            // 
+            // btnSelectHotel
+            // 
+            this.btnSelectHotel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectHotel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSelectHotel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSelectHotel.Font = new System.Drawing.Font("Calisto MT", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectHotel.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSelectHotel.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectHotel.Image")));
+            this.btnSelectHotel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelectHotel.Location = new System.Drawing.Point(10, 297);
+            this.btnSelectHotel.Name = "btnSelectHotel";
+            this.btnSelectHotel.Size = new System.Drawing.Size(272, 57);
+            this.btnSelectHotel.TabIndex = 3;
+            this.btnSelectHotel.Text = "     Select Hotel";
+            this.btnSelectHotel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSelectHotel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSelectHotel.UseVisualStyleBackColor = true;
+            this.btnSelectHotel.Click += new System.EventHandler(this.btnSelectHotel_Click);
             // 
             // btnCustomerDetail
             // 
@@ -191,24 +212,31 @@ namespace Version2
             this.panelHolder.Size = new System.Drawing.Size(1350, 545);
             this.panelHolder.TabIndex = 3;
             // 
-            // btnSelectHotel
+            // btnAddRoom
             // 
-            this.btnSelectHotel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSelectHotel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSelectHotel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSelectHotel.Font = new System.Drawing.Font("Calisto MT", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectHotel.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSelectHotel.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectHotel.Image")));
-            this.btnSelectHotel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelectHotel.Location = new System.Drawing.Point(10, 297);
-            this.btnSelectHotel.Name = "btnSelectHotel";
-            this.btnSelectHotel.Size = new System.Drawing.Size(272, 57);
-            this.btnSelectHotel.TabIndex = 3;
-            this.btnSelectHotel.Text = "     Select Hotel";
-            this.btnSelectHotel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSelectHotel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSelectHotel.UseVisualStyleBackColor = true;
-            this.btnSelectHotel.Click += new System.EventHandler(this.btnSelectHotel_Click);
+            this.btnAddRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddRoom.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddRoom.Font = new System.Drawing.Font("Calisto MT", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRoom.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAddRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnAddRoom.Image")));
+            this.btnAddRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddRoom.Location = new System.Drawing.Point(10, 370);
+            this.btnAddRoom.Name = "btnAddRoom";
+            this.btnAddRoom.Size = new System.Drawing.Size(272, 57);
+            this.btnAddRoom.TabIndex = 4;
+            this.btnAddRoom.Text = "     Select Room";
+            this.btnAddRoom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddRoom.UseVisualStyleBackColor = true;
+            // 
+            // selectHotel1
+            // 
+            this.selectHotel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selectHotel1.Location = new System.Drawing.Point(0, 0);
+            this.selectHotel1.Name = "selectHotel1";
+            this.selectHotel1.Size = new System.Drawing.Size(1350, 545);
+            this.selectHotel1.TabIndex = 4;
             // 
             // mainPicture1
             // 
@@ -225,14 +253,6 @@ namespace Version2
             this.customerDetail1.Name = "customerDetail1";
             this.customerDetail1.Size = new System.Drawing.Size(1350, 545);
             this.customerDetail1.TabIndex = 0;
-            // 
-            // selectHotel1
-            // 
-            this.selectHotel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.selectHotel1.Location = new System.Drawing.Point(0, 0);
-            this.selectHotel1.Name = "selectHotel1";
-            this.selectHotel1.Size = new System.Drawing.Size(1350, 545);
-            this.selectHotel1.TabIndex = 4;
             // 
             // dashboard1
             // 
@@ -276,5 +296,6 @@ namespace Version2
         private mainPicture mainPicture1;
         private System.Windows.Forms.Button btnSelectHotel;
         private selectHotel selectHotel1;
+        private System.Windows.Forms.Button btnAddRoom;
     }
 }

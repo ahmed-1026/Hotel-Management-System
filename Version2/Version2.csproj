@@ -51,12 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="userConstrol for Admin\addHotel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userConstrol for Admin\addHotel.Designer.cs">
+      <DependentUpon>addHotel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuration.cs" />
     <Compile Include="customerDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="customerDetail.Designer.cs">
       <DependentUpon>customerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\dashBoard2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\dashBoard2.Designer.cs">
+      <DependentUpon>dashBoard2.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\dashboard1.cs">
       <SubType>Form</SubType>
@@ -69,6 +81,12 @@
     </Compile>
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="getRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="getRoom.Designer.cs">
+      <DependentUpon>getRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="mainPicture.cs">
       <SubType>UserControl</SubType>
@@ -96,11 +114,17 @@
     <EmbeddedResource Include="Forms\dashboard1.resx">
       <DependentUpon>dashboard1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dashBoard2.resx">
+      <DependentUpon>dashBoard2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\signUp.resx">
       <DependentUpon>signUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="getRoom.resx">
+      <DependentUpon>getRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainPicture.resx">
       <DependentUpon>mainPicture.cs</DependentUpon>
@@ -116,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="selectHotel.resx">
       <DependentUpon>selectHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userConstrol for Admin\addHotel.resx">
+      <DependentUpon>addHotel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

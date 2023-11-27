@@ -35,7 +35,7 @@ namespace Version2
                 }
                 catch(Exception c)
                 {
-                    MessageBox.Show("1");
+                    //MessageBox.Show("1");
                     MessageBox.Show(c.Message);
                 }
                 try
@@ -44,7 +44,7 @@ namespace Version2
                 }
                 catch (Exception c)
                 {
-                    MessageBox.Show("2");
+                    //MessageBox.Show("2");
                     MessageBox.Show(c.Message);
                 }
                 try
@@ -53,7 +53,7 @@ namespace Version2
                 }
                 catch (Exception c)
                 {
-                    MessageBox.Show("3");
+                    //MessageBox.Show("3");
                     MessageBox.Show(c.Message);
                 }
                 bool checker = false;
@@ -64,7 +64,7 @@ namespace Version2
                 }
                 catch(Exception c)
                 {
-                    MessageBox.Show("4");
+                    //MessageBox.Show("4");
                     MessageBox.Show(c.Message);
                 }
                 if (checker)
@@ -83,6 +83,46 @@ namespace Version2
                 MessageBox.Show("Please! Fill all the credentials first :)");
             }
 
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("prerssed");
+        }
+
+        private void signUp_Load(object sender, EventArgs e)
+        {
+            txtUsername.Leave += TxtUsername_Leave; ;
+        }
+
+        private void TxtUsername_Leave(object sender, EventArgs e)
+        {
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("Select *from Users", con);
+            string userName = "";
+            bool checker = false;
+            SqlDataReader read = cmd.ExecuteReader();
+            while (read.Read())
+            {
+                userName =  read["Username"].ToString();
+                if(userName == txtUsername.Text)
+                {
+                    read.Close();
+                    checker = true;
+                    break;
+
+                }
+                
+            }
+            if (checker)
+            {
+                MessageBox.Show("This username is already taken. Tru another One");
+
+            }
+            read.Close();
+            //MessageBox.Show("Left");
+
+            //throw new NotImplementedException();
         }
     }
 }

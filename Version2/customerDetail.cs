@@ -55,6 +55,9 @@ namespace Version2
                 if (checker)
                 {
                     MessageBox.Show("Data Added Successfully :)");
+                    //this.Hide();
+                    //selectHotel ffm = new selectHotel();
+                    //ffm.Show();
                 }
 
             }

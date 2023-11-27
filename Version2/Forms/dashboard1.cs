@@ -30,7 +30,7 @@ namespace Version2
 
         private void gunaImageButton1_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(this.Height.ToString() + this.Width.ToString());
+            MessageBox.Show(this.Height.ToString() + this.Width.ToString());
             this.Hide();
             formLogin frm = new formLogin();
             frm.Show();
