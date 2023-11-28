@@ -92,7 +92,7 @@ namespace Version2
 
         private void signUp_Load(object sender, EventArgs e)
         {
-            txtUsername.Leave += TxtUsername_Leave; ;
+            txtUsername.Leave += TxtUsername_Leave;
         }
 
         private void TxtUsername_Leave(object sender, EventArgs e)
@@ -106,20 +106,20 @@ namespace Version2
             {
                 userName =  read["Username"].ToString();
                 if(userName == txtUsername.Text)
-                {
-                    read.Close();
+                { 
                     checker = true;
                     break;
 
                 }
                 
             }
+            read.Close();
             if (checker)
             {
-                MessageBox.Show("This username is already taken. Tru another One");
+                MessageBox.Show("This username is already taken. Try another One");
 
             }
-            read.Close();
+            //read.Close();
             //MessageBox.Show("Left");
 
             //throw new NotImplementedException();

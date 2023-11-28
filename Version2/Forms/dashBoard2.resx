@@ -118,6 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAddRoom.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAABHFJREFUSEu1
+        lmtMW2UYxzHRmCx+MX4wflHj1MRoTLZCLwkChaK0py2l7QFkwMLGinWMARPXlbaennYBCgzGTdla7pAx
+        CWHhOuiYuBgjwgh+mBDUqQwGOAqb22Iy1sfTw0vDaU4JBfZL/mnP2+f5//tezmmDtgsh4+wzxB18T6c4
+        yDEoOPvR8LPDpOQJCRV/3ILzF2zJYfdKU8JdBZ+GzplU/Fs6BY+DyvYWk5JfUZgU6mo8gUFbjpyhpiwM
+        LPGCRaM8+AAqZ+VtsfjFEKGsjhsuzUNDW0OouXpqdvd9AzerMRMDEhcsEkretD6Wm45aGQSHyQ9wI2RA
+        aQUN+edMHPcVynC+lSWMTS0nZVCUFLpsUHJOIAsGvHBpWohQGoUu/WNQhZysPiZ6whayWY7jEmjNkdHv
+        Pa8mFe8O1f7cussOMKt5g2z7ull2rRjOHRVC8eEwaM6S0mOFSWEL1Gq9i2xouBHyMbTUgIb885WKP9mS
+        vT4TXzVkSqAiXQT2HAxWfjTDVFcOnDsipD8rTQ1fpoIFyIaGHyGN2HYwdVhuNFOn1rN3NRkiKKNmVp4e
+        SavlTCzMdJ+CRzfPetVhweFCRrSbugMWdQr+m8iGJrBgNa/OoY2BokMfuUebtPBgzMII8tXskB5sKWFr
+        pFowr9FwXkA2NAEFG1UhySWUUaVW9JQtyFf/jlnBkiBwm3HBb8jCS0DBDmPMkFHJBXuemDWITfmxwVB+
+        PPJRrSGS8TgNKLjBLBmu1EaB40sJawib8hXB0FYg/+cbQ/Q7yIYmoOBavQirN0oeXilLZA1hU3VuNDgI
+        8S/IwgtXKGvbCOYJ5Ro07J+LphhbX03SGluIr1Z/MkOTFVut1X/yGmr3whNinA1xoySMe5yVWkK2r7VA
+        tsQW5Kup3hx3AykuQ627p9GC9U735rrZwrwat0JbUexyjU70FmrbPRf1Ua9SS3hnfiTfb+jQxdT/6s1Y
+        IWrZO6qMwvcbLNjaaLuW3suN0D+dp6GzHIc6QjxBHded/zBsRZNVuvBdfRpcsinAaU+FzjI19FQlwveN
+        aZ7gclS2N8hOd7+uJgf18eS1QbtV/eSPq1/A7wOnYLIzE6a6s8Fz/XN7BpDmvLsJFmeLwtD3sUYzxnhc
+        BoQkv/eNeNLZf9j2w1Je08xTsnMBLpRkweglLR22oZm+XGgrTQZbyw0wXp6FzJrJh9SX/EtlGjiGrLYP
+        TvSHJpLDs0THnLu4fxU2VNI9B7Xn9dBckgJdNUfh24ojYC9IhvOtg94aj4p6XaCtnnDhZmfntmcfR1z9
+        INE6vFjQc49htlklV25D6eWbUNoxCcV9LtYaj3Lrpx/j5qEOZO2fCOL68zjhvH22a4nVaCf6rGLsfhwx
+        kIoi2FESQ9nZjluP2Qx2qsIeF3j2fMslTyCv/eopZDPYjT7/evKB57SjGCaYruflQ4Ujd9kadytj+9+A
+        k856FMVEru//MMEyvKqtmljZa2kqx1dxYnAERTHBiesvKXQ9nGclqaGb8cdgnaCg/wGEChyaxixSKAAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnAddHotel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAABHFJREFUSEu1

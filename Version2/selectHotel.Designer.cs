@@ -65,12 +65,6 @@ namespace Version2
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Pearl Continental Hotel",
-            "Avari Hotel",
-            "Lahore Marriott Hotel",
-            "Faletti\'s Hotel",
-            "The Nishat Hotel"});
             this.comboBox1.Location = new System.Drawing.Point(260, 120);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(200, 28);
@@ -155,6 +149,7 @@ namespace Version2
             this.Controls.Add(this.label1);
             this.Name = "selectHotel";
             this.Size = new System.Drawing.Size(909, 412);
+            this.Load += new System.EventHandler(this.selectHotel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,6 +28,7 @@ namespace Version2
         {
             this.label2.Text = "Welcome " + received;
             addHotel1.Hide();
+            addRoom1.Hide();
 
 
         }
@@ -42,7 +43,16 @@ namespace Version2
         private void btnAddHotel_Click(object sender, EventArgs e)
         {
             mainPicture1.Hide();
+            addRoom1.Hide();
             addHotel1.Show();
+        }
+
+        private void btnAddRoom_Click(object sender, EventArgs e)
+        {
+
+            mainPicture1.Hide();
+            addHotel1.Hide();
+            addRoom1.Show();
         }
     }
 }

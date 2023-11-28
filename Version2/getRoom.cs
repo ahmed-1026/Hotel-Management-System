@@ -16,5 +16,10 @@ namespace Version2
         {
             InitializeComponent();
         }
+
+        private void getRoom_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

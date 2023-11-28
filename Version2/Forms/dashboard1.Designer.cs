@@ -237,6 +237,7 @@ namespace Version2
             this.selectHotel1.Name = "selectHotel1";
             this.selectHotel1.Size = new System.Drawing.Size(1350, 545);
             this.selectHotel1.TabIndex = 4;
+            this.selectHotel1.Load += new System.EventHandler(this.selectHotel1_Load);
             // 
             // mainPicture1
             // 

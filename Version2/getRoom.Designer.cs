@@ -37,6 +37,7 @@ namespace Version2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "getRoom";
             this.Size = new System.Drawing.Size(873, 584);
+            this.Load += new System.EventHandler(this.getRoom_Load);
             this.ResumeLayout(false);
 
         }

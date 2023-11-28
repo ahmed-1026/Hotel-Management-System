@@ -12,25 +12,25 @@ namespace Version2
 {
     public partial class dashboard1 : Form
     {
-        private string received;
+        public string received;
         public dashboard1(string passedVariable)
         {
             InitializeComponent();
             received = passedVariable;
-            
         }
 
         private void dashboard1_Load(object sender, EventArgs e)
         {
+            
             //MessageBox.Show(received);
             this.label2.Text = "Welcome "+received;
-            customerDetail1.Hide();
             selectHotel1.Hide();
+            customerDetail1.Hide();
         }
 
         private void gunaImageButton1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this.Height.ToString() + this.Width.ToString());
+            //MessageBox.Show(this.Height.ToString() + this.Width.ToString());
             this.Hide();
             formLogin frm = new formLogin();
             frm.Show();
@@ -50,9 +50,16 @@ namespace Version2
 
         private void btnSelectHotel_Click(object sender, EventArgs e)
         {
+            List<string> formList = DataStorage.Instance.SharedList;
+            formList.Add(received);
             mainPicture1.Hide();
             customerDetail1.Hide();
             selectHotel1.Show();
+        }
+
+        private void selectHotel1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

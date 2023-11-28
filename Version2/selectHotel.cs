@@ -13,68 +13,105 @@ namespace Version2
 {
     public partial class selectHotel : UserControl
     {
+        string received;
         public selectHotel()
         {
             InitializeComponent();
         }
+      
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox1.Text == "Pearl Continental Hotel")
+            bool checker = false;
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("Select *from Hotels", con);
+            SqlDataReader read = cmd.ExecuteReader();
+            while (read.Read())
             {
-                lblLocation.Text = "Shahrah - e - Quaid - e - Azam";
+                if(comboBox1.Text == read["HotelName"].ToString())
+                {
+                    lblLocation.Text = read["Location"].ToString();
+                    lblApproval.Text = read["ApprovalStatus"].ToString();
+                    checker = true;
+                    break;
+                    
+                }
             }
-            else if(comboBox1.Text =="Avari Hotel") 
+            if(checker)
             {
-                lblLocation.Text = "87 Shahrah-e-Quaid-e-Azam";
+            read.Close();
+
             }
-            else if(comboBox1.Text == "Lahore Marriott Hotel")
-            {
-                lblLocation.Text = " Aga Khan Road, Shalimar 5-PO Box 3003";
-            }
-            else if(comboBox1.Text == "Faletti's Hotel")
-            {
-                lblLocation.Text = "Egerton Road";
-            }
-            else
-            {
-                lblLocation.Text = "9A, Gulberg III, Mian Mehmood Ali Kasoori Road";
-            }
-            lblApproval.Text = "Active";
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(comboBox1.Text == "")
+            if(comboBox1.Text == "" || lblApproval.Text == "" || lblLocation.Text == "")
             {
                 MessageBox.Show("Firstly Select Hotel");
             }
             else
             {
-                bool check = false;
+                List<string> formList = DataStorage.Instance.SharedList;
+                ////Here i am taking userID from User table
+                string userName = formList[formList.Count - 1];
+                // Second Method of taking userID.
                 var con = Configuration.getInstance().getConnection();
-                SqlCommand cmd = new SqlCommand("Insert into Hotels values(@HotelName,@Location,@ApprovalStatus)",con);
-                cmd.Parameters.AddWithValue("@HotelName", comboBox1.Text);
-                cmd.Parameters.AddWithValue("@Location", lblLocation.Text);
-                cmd.Parameters.AddWithValue("@ApprovalStatus", lblApproval.Text);
+                SqlCommand cmd = new SqlCommand("Select UserID from Users where Username = @Username", con);
+                cmd.Parameters.AddWithValue("@Username",userName);
+                object result = cmd.ExecuteScalar(); // Use ExecuteScalar to get a single value
+                int userID = Convert.ToInt32(result);
+                //MessageBox.Show(userID.ToString());
+
+                //MessageBox.Show(Userid.ToString());
+
+
+                ////Here i am taking Hotelid from Hotel-table
+                int hotelId = 0;
+                var con1 = Configuration.getInstance().getConnection();
+                SqlCommand cmd1 = new SqlCommand("Select HotelID from Hotels where HotelName = @HotelName", con1);
+                cmd1.Parameters.AddWithValue("@HotelName", comboBox1.Text);
+                object result1 = cmd1.ExecuteScalar();
+                hotelId = Convert.ToInt32(result1);
+                //MessageBox.Show(hotelId.ToString());
+
+                // Here I am insert values in UserHotelAcsess.
+                bool check = false;
+                var con3 = Configuration.getInstance().getConnection();
+                SqlCommand cmd3 = new SqlCommand("Insert into UserHotelAccess Values(@UserID,@HotelID,@UserType)", con3);
+                cmd3.Parameters.AddWithValue("@UserID",userID);
+                cmd3.Parameters.AddWithValue("@HotelID",hotelId);
+                cmd3.Parameters.AddWithValue("@UserType","User");
                 try
                 {
-                    cmd.ExecuteNonQuery();
+                    cmd3.ExecuteNonQuery();
                     check = true;
                 }
-                catch(Exception C)
+                catch(Exception c)
                 {
-                    MessageBox.Show(C.Message);
+                    MessageBox.Show(c.Message);
                 }
                 if (check)
                 {
-                    MessageBox.Show("Data Added Successfully :)");
+                    MessageBox.Show("Data Added :)");
                 }
 
 
-
             }
+        }
+
+        private void selectHotel_Load(object sender, EventArgs e)
+        {
+            
+            var con = Configuration.getInstance().getConnection();
+            SqlCommand cmd = new SqlCommand("Select *from Hotels", con);
+            SqlDataReader read = cmd.ExecuteReader();
+            while (read.Read())
+            {
+                comboBox1.Items.Add(read["HotelName"].ToString()); 
+            }
+            read.Close();
         }
     }
 }
