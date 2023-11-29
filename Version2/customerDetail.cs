@@ -55,12 +55,18 @@ namespace Version2
                 if (checker)
                 {
                     MessageBox.Show("Data Added Successfully :)");
+
                     //this.Hide();
                     //selectHotel ffm = new selectHotel();
                     //ffm.Show();
                 }
 
             }
+        }
+
+        private void customerDetail_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

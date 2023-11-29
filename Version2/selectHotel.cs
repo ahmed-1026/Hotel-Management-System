@@ -54,6 +54,7 @@ namespace Version2
             else
             {
                 List<string> formList = DataStorage.Instance.SharedList;
+                
                 ////Here i am taking userID from User table
                 string userName = formList[formList.Count - 1];
                 // Second Method of taking userID.
@@ -74,6 +75,10 @@ namespace Version2
                 cmd1.Parameters.AddWithValue("@HotelName", comboBox1.Text);
                 object result1 = cmd1.ExecuteScalar();
                 hotelId = Convert.ToInt32(result1);
+                List<int> list = DataStorage.Instance.IDs;
+                list.Add(hotelId);
+                //MessageBox.Show(list.Count.ToString());
+
                 //MessageBox.Show(hotelId.ToString());
 
                 // Here I am insert values in UserHotelAcsess.

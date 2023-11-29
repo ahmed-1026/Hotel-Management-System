@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="selectRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="selectRoom.Designer.cs">
+      <DependentUpon>selectRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="userConstrol for Admin\addRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,12 +95,6 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="getRoom.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="getRoom.Designer.cs">
-      <DependentUpon>getRoom.cs</DependentUpon>
-    </Compile>
     <Compile Include="mainPicture.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +115,9 @@
     <Compile Include="selectHotel.Designer.cs">
       <DependentUpon>selectHotel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="selectRoom.resx">
+      <DependentUpon>selectRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userConstrol for Admin\addRoom.resx">
       <DependentUpon>addRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\signUp.resx">
       <DependentUpon>signUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="getRoom.resx">
-      <DependentUpon>getRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainPicture.resx">
       <DependentUpon>mainPicture.cs</DependentUpon>

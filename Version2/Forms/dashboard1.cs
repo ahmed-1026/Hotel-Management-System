@@ -26,6 +26,7 @@ namespace Version2
             this.label2.Text = "Welcome "+received;
             selectHotel1.Hide();
             customerDetail1.Hide();
+            selectRoom1.Hide();
         }
 
         private void gunaImageButton1_Click(object sender, EventArgs e)
@@ -45,6 +46,7 @@ namespace Version2
         {
             mainPicture1.Hide();
             selectHotel1.Hide();
+            selectRoom1.Hide();
             customerDetail1.Show();
         }
 
@@ -54,12 +56,26 @@ namespace Version2
             formList.Add(received);
             mainPicture1.Hide();
             customerDetail1.Hide();
+            selectRoom1.Hide();
             selectHotel1.Show();
         }
 
         private void selectHotel1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void panelUpper_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAddRoom_Click(object sender, EventArgs e)
+        {
+            mainPicture1.Hide();
+            customerDetail1.Hide();
+            selectHotel1.Hide();
+            selectRoom1.Show();
         }
     }
 }
