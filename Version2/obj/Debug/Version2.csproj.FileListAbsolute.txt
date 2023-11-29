@@ -18,3 +18,4 @@ F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.dashBoard2.
 F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.addHotel.resources
 F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.addRoom.resources
 F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.selectRoom.resources
+F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.csproj.AssemblyReference.cache
