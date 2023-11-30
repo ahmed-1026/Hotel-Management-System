@@ -57,6 +57,12 @@
     <Compile Include="selectRoom.Designer.cs">
       <DependentUpon>selectRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="updateCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="updateCustomer.Designer.cs">
+      <DependentUpon>updateCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="userConstrol for Admin\addRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="selectRoom.resx">
       <DependentUpon>selectRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateCustomer.resx">
+      <DependentUpon>updateCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userConstrol for Admin\addRoom.resx">
       <DependentUpon>addRoom.cs</DependentUpon>
