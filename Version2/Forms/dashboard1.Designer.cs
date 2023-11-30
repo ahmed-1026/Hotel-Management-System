@@ -43,10 +43,12 @@ namespace Version2
             this.panelUpper = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelHolder = new System.Windows.Forms.Panel();
+            this.selectRoom1 = new Version2.selectRoom();
             this.selectHotel1 = new Version2.selectHotel();
             this.mainPicture1 = new Version2.mainPicture();
             this.customerDetail1 = new Version2.customerDetail();
-            this.selectRoom1 = new Version2.selectRoom();
+            this.btnUpdateCustomerDetails = new System.Windows.Forms.Button();
+            this.updateCustomer1 = new Version2.updateCustomer();
             this.sidePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,6 +61,7 @@ namespace Version2
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(198)))), ((int)(((byte)(218)))));
+            this.sidePanel.Controls.Add(this.btnUpdateCustomerDetails);
             this.sidePanel.Controls.Add(this.btnAddRoom);
             this.sidePanel.Controls.Add(this.btnSelectHotel);
             this.sidePanel.Controls.Add(this.btnCustomerDetail);
@@ -224,6 +227,7 @@ namespace Version2
             // 
             // panelHolder
             // 
+            this.panelHolder.Controls.Add(this.updateCustomer1);
             this.panelHolder.Controls.Add(this.selectRoom1);
             this.panelHolder.Controls.Add(this.selectHotel1);
             this.panelHolder.Controls.Add(this.mainPicture1);
@@ -233,6 +237,14 @@ namespace Version2
             this.panelHolder.Name = "panelHolder";
             this.panelHolder.Size = new System.Drawing.Size(1350, 545);
             this.panelHolder.TabIndex = 3;
+            // 
+            // selectRoom1
+            // 
+            this.selectRoom1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selectRoom1.Location = new System.Drawing.Point(0, 0);
+            this.selectRoom1.Name = "selectRoom1";
+            this.selectRoom1.Size = new System.Drawing.Size(1350, 545);
+            this.selectRoom1.TabIndex = 5;
             // 
             // selectHotel1
             // 
@@ -259,13 +271,32 @@ namespace Version2
             this.customerDetail1.Size = new System.Drawing.Size(1350, 545);
             this.customerDetail1.TabIndex = 0;
             // 
-            // selectRoom1
+            // btnUpdateCustomerDetails
             // 
-            this.selectRoom1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.selectRoom1.Location = new System.Drawing.Point(0, 0);
-            this.selectRoom1.Name = "selectRoom1";
-            this.selectRoom1.Size = new System.Drawing.Size(1350, 545);
-            this.selectRoom1.TabIndex = 5;
+            this.btnUpdateCustomerDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateCustomerDetails.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnUpdateCustomerDetails.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdateCustomerDetails.Font = new System.Drawing.Font("Calisto MT", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateCustomerDetails.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUpdateCustomerDetails.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateCustomerDetails.Image")));
+            this.btnUpdateCustomerDetails.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateCustomerDetails.Location = new System.Drawing.Point(9, 449);
+            this.btnUpdateCustomerDetails.Name = "btnUpdateCustomerDetails";
+            this.btnUpdateCustomerDetails.Size = new System.Drawing.Size(272, 57);
+            this.btnUpdateCustomerDetails.TabIndex = 5;
+            this.btnUpdateCustomerDetails.Text = "     Update Details ";
+            this.btnUpdateCustomerDetails.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdateCustomerDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdateCustomerDetails.UseVisualStyleBackColor = true;
+            this.btnUpdateCustomerDetails.Click += new System.EventHandler(this.btnUpdateCustomerDetails_Click);
+            // 
+            // updateCustomer1
+            // 
+            this.updateCustomer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateCustomer1.Location = new System.Drawing.Point(0, 0);
+            this.updateCustomer1.Name = "updateCustomer1";
+            this.updateCustomer1.Size = new System.Drawing.Size(1350, 545);
+            this.updateCustomer1.TabIndex = 6;
             // 
             // dashboard1
             // 
@@ -311,5 +342,7 @@ namespace Version2
         private selectHotel selectHotel1;
         private System.Windows.Forms.Button btnAddRoom;
         private selectRoom selectRoom1;
+        private System.Windows.Forms.Button btnUpdateCustomerDetails;
+        private updateCustomer updateCustomer1;
     }
 }

@@ -19,3 +19,4 @@ F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.addHotel.re
 F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.addRoom.resources
 F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.selectRoom.resources
 F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.csproj.AssemblyReference.cache
+F:\Semester_5\SE-LAB\SE_Project\Version2\Version2\obj\Debug\Version2.updateCustomer.resources

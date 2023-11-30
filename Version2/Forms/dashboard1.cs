@@ -27,6 +27,7 @@ namespace Version2
             selectHotel1.Hide();
             customerDetail1.Hide();
             selectRoom1.Hide();
+            updateCustomer1.Hide();
         }
 
         private void gunaImageButton1_Click(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace Version2
             mainPicture1.Hide();
             selectHotel1.Hide();
             selectRoom1.Hide();
+            updateCustomer1.Hide();
             customerDetail1.Show();
         }
 
@@ -57,6 +59,7 @@ namespace Version2
             mainPicture1.Hide();
             customerDetail1.Hide();
             selectRoom1.Hide();
+            updateCustomer1.Hide();
             selectHotel1.Show();
         }
 
@@ -75,7 +78,17 @@ namespace Version2
             mainPicture1.Hide();
             customerDetail1.Hide();
             selectHotel1.Hide();
+            updateCustomer1.Hide();
             selectRoom1.Show();
+        }
+
+        private void btnUpdateCustomerDetails_Click(object sender, EventArgs e)
+        {
+            mainPicture1.Hide();
+            customerDetail1.Hide();
+            selectHotel1.Hide();
+            selectRoom1.Hide();
+            updateCustomer1.Show();
         }
     }
 }

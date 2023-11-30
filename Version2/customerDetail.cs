@@ -33,7 +33,7 @@ namespace Version2
             bool checker = false;
             if(txtCnic.Text == "" || txtEmail.Text == "" || txtName.Text == "" || txtPhone.Text == "")
             {
-                MessageBox.Show("Please! Fill al the Credentials First :)");
+                MessageBox.Show("Please! Fill all the Credentials First :)");
             }
             else
             {

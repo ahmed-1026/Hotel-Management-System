@@ -163,7 +163,7 @@ namespace Version2
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label1);
             this.Name = "customerDetail";
-            this.Size = new System.Drawing.Size(997, 690);
+            this.Size = new System.Drawing.Size(997, 582);
             this.Load += new System.EventHandler(this.customerDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

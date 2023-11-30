@@ -52,6 +52,7 @@ namespace Version2
             else
             {
                 int hotelid = list[0];
+                list.Clear();
                 var con = Configuration.getInstance().getConnection();
                 SqlCommand cmd = new SqlCommand("select *from rooms where hotelid=@hotelid", con);
                 cmd.Parameters.AddWithValue("@hotelid", hotelid);
@@ -68,6 +69,7 @@ namespace Version2
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+
                 dataGridView1.DataSource = dt;
                 // Here i am taking Customer id
                 var con1 = Configuration.getInstance().getConnection();
@@ -75,6 +77,10 @@ namespace Version2
                 object result = cmd1.ExecuteScalar();
                 //MessageBox.Show(Convert.ToInt32(result).ToString());
                 id_of_customer = Convert.ToInt32(result);
+                list.Add(id_of_customer);
+
+                MessageBox.Show(list.Count.ToString());
+
 
                
 
